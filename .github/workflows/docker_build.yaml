@@ -57,7 +57,7 @@ jobs:
           # GitHub Repo => Settings => Secrets 增加 docker hub 登录密钥信息
           # DOCKERHUB_USERNAME 是 docker hub 账号名.
           # DOCKERHUB_TOKEN: docker hub => Account Setting => Security 创建.
-          registry: ${{ github.event.inputs.TARGET_REGISTRY }}
+          registry: crpi-rram6yk2ibb99yjh.cn-beijing.personal.cr.aliyuncs.com
           username: ${{ secrets.DOCKER_USERNAME  }}
           password: ${{ secrets.DOCKER_PASSWORD  }}
       # 构建 Docker 并推送到 Docker 仓库
