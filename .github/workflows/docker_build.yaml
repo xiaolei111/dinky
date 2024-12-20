@@ -52,7 +52,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
       # 登录 docker hub
       - name: Login to Docker Registry
-        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} ${{ github.event.inputs.TARGET_REGISTRY }}
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} ${{ github.event.inputs.TARGET_REGISTRY }} --timeout 30m
       # 构建 Docker 并推送到 Docker 仓库
       - name: Build and push
         id: docker_build
